@@ -1,0 +1,15 @@
+name: first actions practice
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Saying hello from github acctions with ${{github.event_name}}"
+      - uses: actions/checkout@v6
+      - run: ls -la
+      - run: echo "My first github action's all Done"
+      
+
+ 
