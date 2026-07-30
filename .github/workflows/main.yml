@@ -14,6 +14,7 @@ jobs:
           echo "running tests"
           echo "The test should now pass"
           ls -lahr
+          exit 0
 
   build:
     needs: test
