@@ -17,6 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building project"
+
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "deploying code to production"
       
   
   
