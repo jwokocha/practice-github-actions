@@ -13,6 +13,7 @@ jobs:
       - run: echo "Running unit tests
 
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - run: echo "Building project"
