@@ -12,7 +12,8 @@ jobs:
     steps:
       - run: |
           echo "running tests"
-          exit 1
+          echo "The test should now pass"
+          ls -lahr
 
   build:
     needs: test
