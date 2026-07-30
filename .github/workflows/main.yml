@@ -1,9 +1,11 @@
-name: First CLI
+name: First CL
 
 on:
   push:
     branches:
       - main
+
+  workflow_dispatch: 
   
 
 jobs:
