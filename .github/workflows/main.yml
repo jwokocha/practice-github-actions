@@ -19,7 +19,7 @@ jobs:
       - run: |
           echo "running tests"
           echo "The test should now pass"
-          echo "This is where the head is : {{github.head_ref}}"
+          echo "This is where the head is : ${{github.head_ref}}"
           ls -lahr
           exit 0
 
@@ -39,3 +39,4 @@ jobs:
       
   
   
+[![First CL](https://github.com/jwokocha/practice-github-actions/actions/workflows/main.yml/badge.svg)](https://github.com/jwokocha/practice-github-actions/actions/workflows/main.yml)
