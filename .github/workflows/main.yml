@@ -10,7 +10,7 @@ on:
       - main
 
   workflow_dispatch: 
-  
+   
 
 jobs:
   test:
@@ -22,6 +22,13 @@ jobs:
           echo "This is where the head is : ${{github.head_ref}}"
           ls -lahr
           exit 0
+
+      - name: Show GitHub Context
+        run: |
+          echo "Event Name : ${{ github.event_name }}"
+          echo "Git Ref    : ${{ github.ref }}"
+          echo "Head Ref   : ${{ github.head_ref }}"
+          echo "Base Ref   : ${{ github.base_ref }}"
 
   build:
     needs: test
@@ -35,8 +42,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: echo "deploying code to production"
-      
-  
-  
-[![First CL](https://github.com/jwokocha/practice-github-actions/actions/workflows/main.yml/badge.svg)](https://github.com/jwokocha/practice-github-actions/actions/workflows/main.yml)
+      - run: |
+          echo "deploying code to production"
+          echo "The deployment is complete"
