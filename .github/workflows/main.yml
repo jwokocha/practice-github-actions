@@ -19,6 +19,7 @@ jobs:
       - run: |
           echo "running tests"
           echo "The test should now pass"
+          echo "This is where the head is : {{github.head_ref}}"
           ls -lahr
           exit 0
 
