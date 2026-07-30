@@ -1,15 +1,20 @@
-name: first actions practice
+name: First CLI
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  say-hello:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Saying hello from github acctions with ${{github.event_name}}"
-      - uses: actions/checkout@v6
-      - run: ls -la
-      - run: echo "My first github action's all Done"
-      
+      - run: echo "Running unit tests"
 
- 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building project"
+      
+  
+  
