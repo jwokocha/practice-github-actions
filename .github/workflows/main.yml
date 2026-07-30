@@ -2,8 +2,7 @@ name: First CLI
 
 on:
   push:
-    branches:
-      - main
+  
 
 jobs:
   test:
