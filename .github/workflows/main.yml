@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running unit tests
+      - run: echo "Running unit tests"
 
   build:
     needs: test
